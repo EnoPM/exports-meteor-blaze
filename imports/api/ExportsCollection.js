@@ -9,7 +9,7 @@ export const ExportsCollection = new Mongo.Collection("exports", {
 })
 
 /**
- * @param {*} item
+ * @param item
  * @param {Function} cb
  */
 export const incrementExportProgression = (item, cb = undefined) => {
