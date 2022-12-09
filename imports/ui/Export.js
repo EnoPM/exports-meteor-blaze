@@ -1,5 +1,4 @@
 import { Template } from "meteor/templating"
-import {insertExport} from "../api/ExportsCollection"
 
 import "./Export.html"
 
@@ -27,7 +26,7 @@ Template.form.events({
         const name = target.name.value
 
         if(name.trim() !== "") {
-            insertExport(name)
+            Meteor.call("exports.insert", name)
 
             target.name.value = ""
         }

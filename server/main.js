@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import {ExportsCollection, incrementExportProgression} from "/imports/api/ExportsCollection"
+import "/imports/api/exportsMethods"
+import "/imports/api/exportsPublications"
 
 const progressExports = () => {
     const exports = ExportsCollection.find({
